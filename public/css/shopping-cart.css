@@ -1,0 +1,191 @@
+.cover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/covers/cart-cover.jpg") 30% 50% / cover no-repeat scroll;
+    height: 30vh;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 275px;
+    margin-bottom: 50px;
+}
+
+.cart-container {
+	width: 63%;
+	min-width: 500px;
+	margin-left: 5%;
+	margin-right: 2%;
+	padding-bottom: 40px;
+	margin-bottom: 80px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+    box-shadow: 0 17px 27px -9px #bdbdbd;
+	overflow: auto;
+}
+
+.cart-title {
+	margin-top: 20px;
+	margin-left: 5%;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.cart-parent {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.cart-parent tr {
+	border-bottom: 1px solid #999;
+}
+
+.cart-parent th {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: right;
+}
+
+.cart-parent th div {
+	margin-right: 20px;
+}
+
+.cart-parent td {
+	text-align: left;
+}
+
+.cart-parent td div {
+	text-align: left;
+}
+
+.cart-parent .book-price {
+	text-align: right;
+}
+
+.cart-parent td div:first-child {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.cart-parent td div:first-child {
+	margin: 20px;
+	margin-bottom: 0px;
+}
+
+.cart-parent td div:last-child {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.textbook-course {
+	font-weight: 400;
+	font-size: 14px;
+	margin: 20px;
+	cursor: auto!important;
+}
+
+.textbook-course:hover {
+	color: #000!important;
+}
+
+.cart-parent td span {
+	font-weight: 400;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.cart-parent td span:hover {
+	color: #f4511e
+}
+
+.cart-parent td input {
+	width: 40px;
+	border-radius: 5px;
+	border: 1px solid #999;
+	padding-left: 5px;
+}
+
+.cart-parent td input:focus {
+	outline: none;
+	border-color: #037ef3;
+}
+
+.cart-textbook {
+	color: #000;
+	transition: 0.5s;
+}
+
+.cart-textbook:hover {
+	text-decoration: none;
+	color: #f4511e;
+}
+
+.empty-cart {
+	margin-top: 20px;
+	margin-left: 5%;
+	font-size: 18px;
+}
+
+
+.price-container {
+	position: absolute;
+	top: calc(40vh + 50px);
+	right: 0;
+	width: 23%;
+	min-width: 200px;
+	height: 275px;
+	margin-right: 5%;
+	margin-left: 2%;
+	margin-bottom: 80px;
+	background-color: #fff;
+	border-radius: 5px;
+    box-shadow: 0 17px 27px -9px #bdbdbd;
+	overflow: auto;
+	text-align: center;
+}
+
+.sub-totals {
+	margin: 30px;
+	margin-top: 50px;
+	width: calc(100% - 60px);
+	text-align: left;
+}
+
+.price {
+	text-align: right;
+}
+
+.numItems {
+	line-height: 0.5rem;
+}
+
+.bottom-spacer {
+	height: 50px;
+}
+
+.sub-totals th {
+	border-top: 1px solid #555;
+	height: 30px;
+}
+
+.checkout-button {
+	background-color: #f4511e;
+    color: #fff;
+    width: 80%;
+    min-width: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    border: 1px solid #f4511e;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.checkout-button:hover {
+	text-decoration: none;
+	color: #f4511e;
+	background-color: #fff;
+    border: 1px solid #f4511e;
+}

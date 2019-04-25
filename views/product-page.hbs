@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="">
+
+        <title>Textbook Exchange - Textbook</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="css/template.css">
+        <link rel="stylesheet" type="text/css" href="css/loading.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Textbook Exchange <small>Your Textbook at a Cheaper Price</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" id="profile">
+                          <a class="nav-link" href="/profile">Account</a>
+                        </li>
+                        <li class="nav-item" id="login">
+                          <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item" id="logout">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-search-button" href="/search">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="menu-shopping-cart-parent">
+                                <a class="nav-link menu-shopping-cart" href="/cart"></a>
+                                <div class="menu-shopping-number" id="menu-shopping-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <main class="container bottom" role="main">
+            <div class="row mt-3 justify-content-start">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Posting
+                        </div>
+                        <div class="card-body">
+                            <img id="image" src="https://images-na.ssl-images-amazon.com/images/I/61eBfUHyFFL.jpg" class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Description
+                        </div>
+                        <div class="card-body" id="product">
+                            <h4>Calculus</h4>
+                            <h5>$24.99</h5>
+                            <p>idk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Options
+                        </div>
+                        <div class="card-body">
+                            <a href="" class="btn mb-1 btn-primary" id="cart">Add to cart</a>
+                            <a href="" class="btn mb-1 btn-primary" id="wishlist">Add to wishlist</a>
+                            <!-- Admin only options
+                            <a href="#" class="btn mb-1 btn-primary">Edit page</a>
+                            <a href="#" class="btn mb-1 btn-primary">Delete page</a>
+                        -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright © Textbook Exchange 2019</p>
+            </div>
+        </footer>
+        <script>const session = {{{ session }}};</script>
+        <script src="js/nav.js"></script>
+        <script src="js/API/textbook-script.js"></script>
+        <script src="js/API/user-script.js"></script>
+        <script src="js/product-area.js"></script>
+        <script src="js/product-search.js"></script>
+        <script src="js/textbook.js"></script>
+    </body>
+</html>

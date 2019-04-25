@@ -1,0 +1,77 @@
+.cover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/covers/search-cover.jpg") 30% 50% / cover no-repeat scroll;
+    height: 30vh;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Search Bar */
+.search {
+    width: 700px;
+    display: flex;
+    margin: 30px auto 30px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.search-title {
+    width: 15%;
+    padding: 15px;
+    background-color: #343a40;
+    color: #fff;
+    position: relative;
+}
+
+.search-bar {
+    width: 35%;
+    padding: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    font-size: 1rem;
+    height: 20px;
+    color: #555;
+    padding: 6px 12px;
+    vertical-align: middle;
+    border: none;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-button {
+    background-color: #f4511e;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 32px;
+    padding-top: 10px;
+}
+
+
+
+/* Main Body */
+.product-container {
+    background-color: #f2f2f2;
+    min-height: 400px;
+    overflow: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Sort Filter */
+.sort-container {
+    float: right;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+#select {
+    visibility: hidden;
+}

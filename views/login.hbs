@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Textbook Exchange</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Bootstrap core CSS -->
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/template.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    
+    
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Textbook Xchange <small>Your Textbook at a Cheaper Price</small></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="profile">
+                        <a class="nav-link" href="/profile">Account</a>
+                    </li>
+                    <li class="nav-item" id="login">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item" id="logout">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-search-button" href="/search">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="menu-shopping-cart-parent">
+                            <a class="nav-link menu-shopping-cart" href="/cart"></a>
+                            <div class="menu-shopping-number" id="menu-shopping-number"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loginContainer">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form name="loginForm" class="form " action="/users/login" method="post">
+                            <h3 class="text-center">Login</h3>
+                            <div class="form-group">
+                                <label for="username">Username:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label><br>
+                                <input type="password" name="password" id="password" class="form-control">
+                                <input type="hidden" name="sign_up" id="sign_up_field" value="false"/>
+                            </div>
+                            
+                            <div class="form-group submit">
+                                <input type="submit" class="btn btn-default btn-md" value="Log In" id="submit_btn">
+                                <input type="button" name="sign_up" class="btn btn-primary btn-md" value="Sign Up" id="sign-up-button" onclick="signUpButtonClick()">
+                            </div>
+                            <div class="form-group error-message" id="loginFail" hidden="true">
+                                <span>Incorrect username or password</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="py-5 bg-dark">
+        <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Textbook Exchange 2019</p>
+        </div>
+    </footer>
+    <script>
+        const session = {{{ session }}};
+        console.log(session)
+    </script>
+    <script src="js/nav.js"></script>
+    <script type="text/javascript" src="js/API/user-script.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

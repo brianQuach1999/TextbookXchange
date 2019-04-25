@@ -1,0 +1,159 @@
+#bookAdd {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    padding-top: 0;
+	width: 100%;
+}
+
+.adminForm {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.adminForm input {
+	width: 150px;
+}
+
+.form-description input {
+	width: 300px;
+}
+
+.btn-primary {
+	margin-left: 20px;
+	height: 38px;
+	margin-top: 16px;
+}
+
+.main-content {
+	margin-top: 50px;
+}
+
+.manager-header {
+	font-size: 24px;
+	font-weight: 600;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#profile {
+    display: none;
+}
+
+#inventory {
+	display: none;
+}
+
+#wishlist {
+	display: none;
+}
+
+#wishlist .manager-header {
+    padding-bottom: 0;
+}
+
+.category-parent {
+	margin-top: 50px;
+	margin-right: 20px;
+}
+
+.top-container {
+	display: flex;
+	margin: 20px;
+}
+
+/* Main Body */
+.product-container {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 80px;
+    overflow: visible;
+}
+
+/* Sort Filter */
+.sort-container {
+    float: right;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#select {
+    visibility: hidden;
+}
+
+
+.cart-parent th div {
+	text-align: left;
+	margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart-parent td div {
+	font-size: 14px!important;
+	font-weight: 400!important;
+}
+
+.cart-parent td div:first-child {
+    font-weight: 600!important;
+    font-size: 18px!important;
+}
+
+.edit-button {
+    position: absolute;
+    right: 10%;
+    margin-top: 15px;
+    width: 28px;
+    height: 45px;
+    background: url("../images/icons/edit.png") 50% 50% / contain no-repeat scroll;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background: url("../images/icons/edit-color.png") 50% 50% / contain no-repeat scroll;
+}
+
+.add-book {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+#add-popup, #edit-popup, #user-popup {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    z-index: 99;
+    width: 45vw;
+    padding-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 17px 27px -9px #555;
+    display: none;
+}
+
+.imageForm input {
+    width: 250px;
+}
+
+.form-buttons {
+    margin-left: 55%;
+}
+
+.cancel, .cancelEdit {
+    background-color: #53595e;
+    border-color: #53595e;
+}
+
+.cancel:hover, .cancelEdit:hover {
+    background-color: #343a40;
+    border-color: #343a40;
+}

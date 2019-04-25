@@ -1,0 +1,67 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+#carouselExampleIndicators {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.carouselImg {
+  height: 300px;
+  /*padding: 10px;*/
+  float: right;
+  padding: 10px 100px 10px 10px;
+}
+
+.priceCut{
+  margin: auto;
+  padding: 40px 40px 40px 100px;
+  float:left;
+}
+
+.salePrice {
+  color: rgb(19, 209, 19);
+}
+
+.originalPrice{
+  color: crimson;
+}
+
+.indexSearchBar{
+  width: 450px;
+}
+
+.homeImage{
+  height: 200px;
+  width:auto;
+  display:block;
+}
+
+/* Home Page override */
+.product-parent {
+    width: 100%;
+}
+
+.product {
+    margin: 20px;
+}
+
+.category-parent {
+  margin-top: 20px;
+}
+
+
+
+.index {
+  height: 60vh;
+}
+
+.cover-title {
+  margin-top: 80px;
+}

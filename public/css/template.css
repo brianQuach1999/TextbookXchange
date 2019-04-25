@@ -1,0 +1,87 @@
+body {
+  padding-top: 56px;
+}
+
+/* Title Cover */
+.cover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/covers/search-cover.jpg") 30% 50% / cover no-repeat scroll;
+    height: 30vh;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cover-title {
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    color: #fff;
+}
+
+/* Menu CSS */
+.menu-search-button {
+    background-color: #fff;
+    color: #343a40!important;
+    margin-top: 8px;
+    margin-left: 25px;
+    padding: 0;
+    height: 28px;
+    border-radius: 3px;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    transition: 0.5s;
+}
+
+.menu-search-button:hover {
+    background-color: #343a40!important;
+    color: #fff!important;
+}
+
+.menu-shopping-cart-parent {
+    position: relative;
+}
+
+.menu-shopping-cart {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/icons/shopping-cart.png");
+    transition: 0.5s;
+}
+
+.menu-shopping-cart:hover {
+    background: url("../images/icons/shopping-cart-color.png");
+}
+
+.menu-shopping-number {
+    background-color: #f4511e;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 40px;
+    top: 2px;
+    border-radius: 50%;
+    font-size: 9px;
+    text-align: center;
+    line-height: 0.9rem;
+}
+
+.bottom {
+    padding-bottom: 80px;
+}
+
+.btn-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-primary:hover {
+    background-color: #f4511e;
+    border-color: #f4511e;
+}
+
+#profile, #login, #logout, #wishlist {
+    display: none;
+}

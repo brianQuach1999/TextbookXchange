@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/covers/search-cover.jpg") 30% 50% / cover no-repeat scroll;
+}
+
+#loginContainer .container #login-row #login-column #login-box {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 600px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+    border-radius: 3px;
+}
+
+#loginContainer .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#loginContainer .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+
+.error-message {
+    color: #f00;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.submit {
+    text-align: center;
+}
+
+.submit input:hover {
+    background-color: #343a40;
+    color: #f4511e;
+}

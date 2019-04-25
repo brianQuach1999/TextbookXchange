@@ -1,0 +1,32 @@
+/* Categories */
+.category-parent {
+    width: 20%;
+    margin-top: 80px;
+    float: left;
+}
+
+.category-header {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.categories {
+
+}
+
+.category {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.category:hover {
+    background-color: #343a40; 
+    color: #fff;
+}
+
+.active-category {
+    background-color: #343a40; 
+    color: #f4511e!important;
+}

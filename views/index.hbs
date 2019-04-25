@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Textbook Exchange</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Bootstrap core CSS -->
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="css/template.css">
+  <link rel="stylesheet" type="text/css" href="css/productcards.css">
+  <link rel="stylesheet" type="text/css" href="css/categories.css">
+  <link rel="stylesheet" type="text/css" href="css/loading.css">
+  <link rel="stylesheet" type="text/css" href="css/shop-homepage.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Textbook Exchange <small>Your Textbook at a Cheaper Price</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" id="profile">
+                          <a class="nav-link" href="/profile">Account</a>
+                        </li>
+                        <li class="nav-item" id="login">
+                          <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item" id="logout">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-search-button" href="/search">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="menu-shopping-cart-parent">
+                                <a class="nav-link menu-shopping-cart" href="/cart"></a>
+                                <div class="menu-shopping-number" id="menu-shopping-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <div class="cover index">
+      <div class="cover-title">
+          <h1>Textbook Exchange</h1>
+          <h6>Your Textbook at a Cheaper Price</h6>
+      </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container bottom">
+    <div id='main-content' class='container'>
+      <div id='info-box' class="jumbotron">
+        <div id='sub-title' class="h3">
+          A Community to Sell and Buy Textbooks from Students
+        </div>
+        <br>
+        <div>
+          <div id='info'>
+            <ul id="info-list">
+              <li>The Textbook Exchange is a community hub where people can sell their own textbooks and buy from others.</li>
+              <br>
+              <li>We empower students with their textbooks.  You set the price and you choose who to buy from.</li>
+              <br>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Textbook Exchange 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <script>const session = {{{ session }}};</script>
+  <script src="js/nav.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

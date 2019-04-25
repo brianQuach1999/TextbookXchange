@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>User</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    
+    <link rel="stylesheet" type="text/css" href="css/template.css">
+
+    <link rel="stylesheet" type="text/css" href="css/productcards.css">
+    <link rel="stylesheet" type="text/css" href="css/categories.css">
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="css/shopping-cart.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Textbook Exchange <small>Your Textbook at a Cheaper Price</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" id="profile">
+                          <a class="nav-link" href="/profile">Account</a>
+                        </li>
+                        <li class="nav-item" id="login">
+                          <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item" id="logout">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-search-button" href="/search">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="menu-shopping-cart-parent">
+                                <a class="nav-link menu-shopping-cart" href="/cart"></a>
+                                <div class="menu-shopping-number" id="menu-shopping-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+        <div class="category-parent">
+            <div class="category-header">
+                User
+            </div>
+            <div class="list-group categories" id="categories">
+
+            </div>  
+        </div>
+
+        <div class="main-content bottom">
+        <div id="user-profile" class="content-box">
+
+            <div class="product-container">
+                <div class="manager-header">Profile</div>
+                <!--<div class="edit-button">
+                </div>-->
+                <table class="cart-parent" id="profile-parent">
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th><div>Name</div></th>
+                        <td><div id="username">User 1</div></td>
+                    </tr>
+                    <!--<tr>
+                        <th><div>University</div></th>
+                        <td><div>University of Toronto - St. George</div></td>
+                    </tr>
+                    <tr>
+                        <th><div>Biography</div></th>
+                        <td><div>Hello!</div></td>
+                    </tr>-->
+                </table>
+            </div>
+        </div>
+        <div id="inventory" class="content-box">
+
+            <div class="product-container">               
+                <div class="manager-header">Inventory</div>
+                <!--
+                <div class="top-container">
+                    <div class="sort-container">
+                        <select id="select" class="dropdown">
+                            <option value="price">Sort by Price</option>
+                            <option value="alphabetically">Sort Alphabetically</option>
+                            <option value="course">Sort by Course</option>
+                        </select>
+                    </div>
+                </div>-->
+                <div class="add-book btn btn-primary" id="add-book">Sell a Book</div>
+
+                <div id="add-popup">
+                    <form id="bookAdd" class="form" method="post" enctype='multipart/form-data'>
+                        <div class="form-group adminForm">
+                            <label for="bookTitle">Book Title:</label>
+                            <input class="form-control" id="bookTitle" placeholder="Book Title">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="author">Author:</label>
+                            <input class="form-control" id="author" placeholder="e.g. Brian Quach">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="course">Course:</label>
+                            <input class="form-control" id="course" placeholder="e.g. CSC309" pattern="^[A-Z]{3,3}[1-4][0-9]{2,2}$" title="e.g. CSC309">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="category">Category:</label>
+                            <select id="category" class="form-control">
+                                <option value="" disabled selected>Select a Category</option>
+                            </select>
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="price">Price:</label>
+                            <input class="form-control" id="price" placeholder="e.g. 300" pattern="^\d+(.\d{1,2})?$" title="e.g. 24.99">
+                        </div>
+                        <div class="form-group adminForm form-description">
+                            <label for="description">Description:</label>
+                            <textarea class="form-control" id="description" placeholder="e.g. Brian Quach" rows='3' cols='25' maxlength="1000"></textarea>
+                        </div>
+                        <div class="form-group adminForm imageForm">
+                            <label for="pic">Image:</label><br>
+                            <input type="file" id="pic" name="pic" accept="image/*" required >
+                        </div>
+                        <div class="form-group form-buttons">
+                            <button type="submit" class="btn btn-primary">Sell!</button>
+                            <div id="cancel" class="btn btn-primary cancel">Cancel</div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="edit-popup">
+                    <form id="bookAdd" class="form" method="patch" enctype='multipart/form-data'>
+                        <input type="hidden" id="bookId" name="bookId" value="">
+                        <div class="form-group adminForm">
+                            <label for="bookTitleEdit">Book Title:</label>
+                            <input class="form-control" id="bookTitleEdit" placeholder="Book Title">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="authorEdit">Author:</label>
+                            <input class="form-control" id="authorEdit" placeholder="e.g. Brian Quach">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="courseEdit">Course:</label>
+                            <input class="form-control" id="courseEdit" placeholder="e.g. CSC309" pattern="^[A-Z]{3,3}[1-4][0-9]{2,2}$" title="e.g. CSC309">
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="categoryEdit">Category:</label>
+                            <select id="categoryEdit" class="form-control">
+                                <option value="" disabled selected>Select a Category</option>
+                            </select>
+                        </div>
+                        <div class="form-group adminForm">
+                            <label for="priceEdit">Price:</label>
+                            <input class="form-control" id="priceEdit" placeholder="e.g. 300" pattern="^\d+(.\d{1,2})?$" title="e.g. 24.99">
+                        </div>
+                        <div class="form-group adminForm form-description">
+                            <label for="descriptionEdit">Description:</label>
+                            <textarea class="form-control" id="descriptionEdit" placeholder="e.g. Brian Quach" rows='3' cols='25' maxlength="1000"></textarea>
+                        </div>
+                        <div class="form-group adminForm imageForm">
+                            <label for="picEdit">Image:</label><br>
+                            <input type="file" id="picEdit" name="picEdit" accept="image/*" >
+                        </div>
+                        <div class="form-group form-buttons">
+                            <button type="submit" class="btn btn-primary">Update!</button>
+                            <div id="cancelEdit" class="btn btn-primary cancel">Cancel</div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <table class="cart-parent" id="inventory-parent">
+                    <tr>
+                        <th></th>
+                        <th><div>Price</div></th>
+                    </tr>
+                </table>
+
+                <div class="loading" id="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>
+        </div>
+        <div id="wishlist" class="content-box">
+
+            <div class="product-container">               
+                <div class="manager-header">Wishlist</div>
+
+                <table class="cart-parent" id="cart-parent">
+                    <tr>
+                        <th></th>
+                        <th><div>Price</div></th>
+                    </tr>
+                </table>
+
+                <div class="loading" id="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Textbook Exchange 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+<script>const session = {{{ session }}};</script>
+<script src="js/nav.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/API/textbook-script.js"></script>
+<script src="js/API/category-script.js"></script>
+<script src="js/API/user-script.js"></script>
+<script src="js/product-area.js"></script>
+<script src="js/product-search.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/profile-actions.js"></script>
+<script src="js/add-book.js"></script>
+<script src="js/edit-book.js"></script>
+<script src="js/user.js"></script>
+</body>
+</html>

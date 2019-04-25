@@ -1,0 +1,48 @@
+The Textbook Exchange: A hub for buying textbooks online
+-----
+The Textbook Exchange (name is tentative) is a website where individuals can search for textbooks 
+based on category, course or the book name.  They can view details of each book and can add these items to their wishlist or to their cart.  From the cart, they can checkout and purchase.
+Users most login in order to purchase any textbooks.  They can also edit their own user profile and view others profiles
+Admins are able to manage all users in the system as well as all textbooks in circulation.  This includes editing profiles,
+adding books and deleting books.
+-----
+Setup:
+No setup needed. Download the entire repository to your local machine and open index.html
+-----
+User Login:
+Username: user
+Password: user
+Admin Login:
+Username: admin
+Password: admin
+-----
+Usage for Users:
+ - The home page contains the featured textbooks, filterable by category
+ - Search for Textbooks
+ 	- Clicking onto search will direct them to the search page
+ 	- Search by course, textbook, category
+ 	- Sort by price (low to high) and alphabetically
+ - Viewing a specific textbook by clicking on the product card
+ 	- Can view the full set of details
+ 	- Can add to the cart or wishlist
+ - Shopping Cart
+ 	- Can remove items, save for later (via the wishlist), and change the quantity
+ 	- Can proceed to checkout - deadend for now
+ - User Login
+ 	- User may login at any point and subsequently access their profile or purchase books
+ 	- If they haven't logged in, proceeding to checkout will lead to the login window
+ - User Profile
+ 	- Access their inventory of books they are selling
+ 	- Access their wishlist
+ 	- Edit their profile details
+
+Usage for Admins:
+ - Admin must login to gain access to their admin privileges, otherwise they remain a public user
+ - They may do any of the actions a user can take
+ - In addition, through their profile:
+ 	 - They can view a list of all users in the system
+ 	 	 - They can view individual user profiles from this list by clicking on a user
+ 	 	 - They can edit privileges of a user (user/admin) and delete them
+ 	 - They can view a list of all the textbooks in the system
+ 	 	 - They can edit the information of individual textbooks
+ 	 	 - They can add/delete textbooks

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="">
+
+        <title>Textbook Exchange - Shopping Cart</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="css/template.css">
+        <link rel="stylesheet" type="text/css" href="css/shopping-cart.css">
+        <link rel="stylesheet" type="text/css" href="css/loading.css">
+        <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Textbook Exchange <small>Your Textbook at a Cheaper Price</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" id="profile">
+                          <a class="nav-link" href="/profile">Account</a>
+                        </li>
+                        <li class="nav-item" id="login">
+                          <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item" id="logout">
+                          <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-search-button" href="/search">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="menu-shopping-cart-parent">
+                                <a class="nav-link menu-shopping-cart" href="/cart"></a>
+                                <div class="menu-shopping-number" id="menu-shopping-number"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="cover">
+            <div class="cover-title">
+                <h1>Order the Perfect Textbook</h1>
+            </div>
+        </div>
+        
+        <div class="main-container bottom">
+            <div class="cart-container">
+                <div class="cart-title">
+                    Shopping Cart
+                </div>
+                <div class="loading" id="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+                <table class="cart-parent" id="cart-parent">
+                    <tr>
+                        <th></th>
+                        <th><div>Price</div></th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="price-container">
+                <table class="sub-totals">
+                    <tr>
+                        <td>
+                            Subtotal:
+                        </td>
+                        <td class="price" id="subtotal">
+                            $0.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="numItems" id="numItems">
+                            (0 items)
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr class="bottom-spacer">
+                        <td>
+                            HST:
+                        </td>
+                        <td class="price" id="tax">
+                            $0.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Total:
+                        </th>
+                        <th class="price" id="total">
+                            $0.00
+                        </th>
+                    </tr>
+                </table>
+                <a class="checkout-button" href="#">Proceed to Checkout</a>
+            </div>
+        </div>
+        
+        
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Textbook Exchange 2019</p>
+            </div>
+        </footer>
+        <script>const session = {{{ session }}};</script>
+        <script src="js/nav.js"></script>
+        <script src="js/dropdown.js"></script>
+        <script src="js/API/textbook-script.js"></script>
+        <script src="js/API/user-script.js"></script>
+        <script src="js/shopping-cart.js"></script> 
+    </body>
+
+</html>

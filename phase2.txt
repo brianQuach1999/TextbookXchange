@@ -1,0 +1,208 @@
+The Textbook Exchange: A hub for buying textbooks online
+
+-----
+
+1. Overview 
+2. Setup 
+3. Login Info 
+4. Usage Instructions 
+5. Express Routes 
+6. Edits from Phase 1
+
+-----
+
+1. Overview
+
+The Textbook Exchange (stylized Textbook Xchange) is a website where individuals
+can search for textbooks based on category, course or the book name. They can
+view details of each book and can add these items to their wishlist or to their
+cart. From the cart, they can checkout and purchase. Users most login in order
+to purchase any textbooks. They can also edit their own user profile and view
+others profiles Admins are able to manage all users in the system as well as all
+textbooks in circulation. This includes editing profiles, adding books and
+deleting books.
+
+-----
+
+2. Setup
+
+Access the web application on: https://textbook-central.herokuapp.com
+
+-----
+
+3. Login Info
+
+User Login: 
+    User 1: 
+        Username: user1
+        Password: user1
+    User 2:
+        Username: user1
+        Password: user1
+    Admin Login:
+        Admin 1:
+            Username: admin
+            Password: admin
+
+-----
+
+4. Usage Instructions
+
+Usage for Users:
+ - The home page contains the featured textbooks, filterable by category
+ - Search for Textbooks
+    - Clicking onto search will direct them to the search page
+    - Search by course, textbook, category
+    - Sort by price (low to high) and alphabetically
+ - Viewing a specific textbook by clicking on the product card
+    - Can view the full set of details
+    - Can add to the cart or wishlist
+ - Shopping Cart
+    - Can remove items, save for later (via the wishlist), and change the
+      quantity
+    - Can proceed to checkout (not implemented yet)
+ - User Login
+    - User may login at any point and subsequently access their profile or
+      purchase books
+    - If they haven't logged in, proceeding to checkout will lead to the login
+      window
+ - User Profile
+    - Access their inventory of books they are selling
+         - Add a new book to sell
+         - Edit or delete books they own
+    - Access their wishlist
+    - Edit their profile details
+
+Usage for Admins:
+ - Admin must login to gain access to their admin privileges
+ - They may do any of the actions a user can take
+ - In addition, through their profile:
+     - They can view a list of all users in the system
+         - They can view individual user profiles from this list by clicking on
+           a user
+         - They can edit privileges of a user (user/admin) and delete them
+     - They can view a list of all the textbooks in the system
+         - They can edit the information of individual textbooks
+         - They can add/delete textbooks
+
+Usage for Users (Not logged in):
+ - Users who do not log in can still access and use the platform with some
+   limitations
+     - Their cart expires with their session
+     - Logging in will not transfer this cart to the user profile
+     - No wishlist
+
+-----
+
+5. Express Routes
+
+GET Routes for views:
+1. '/'
+     - Routes to the home page on index.html
+2. '/login'
+     - Routes to the login page if not logged in, to the profile if logged in
+3. '/logout'
+     - Destroys the current session and logs out, redirecting to the home page
+4. '/profile'
+     - Routes to the account's profile and dashboard if logged in, to login page if not logged in
+5. '/search'
+     - Routes to the search page
+     - Uses query strings for search filter
+6. '/textbook?id=<id>'
+     - Routes to the textbook details page
+     - Uses query string on the textbook id to show the specified textbook
+7. '/cart'
+     - Routes to the shopping cart
+     - Shows the cart for the current session
+
+Routes for model manipulation:
+1. Users
+	 - GET '/users' 
+		 - Get all users who match a query.  If the query is empty, returns all
+ 		   users
+	 - GET '/users/:id'
+		 - Get a user by their mongo id
+	 - POST '/users'
+		 - Create a user
+	 - PATCH '/users/:id'
+ 		 - Update the info for a user by their mongo id
+	 - DELETE '/users/:id'
+ 		 - Delete the user by their mongo id
+2. Categories
+	 - GET '/categories'
+ 		 - Get all categories that match a query.  If the query is empty,
+		   returns all categories
+	 - GET '/categories/:id'
+ 		 - Get a category by its mongo id
+	 - POST '/categories'
+ 		 - Create a category
+	 - PATCH '/categories/:id'
+ 		 - Update the name of a category by its mongo id
+	 - DELETE '/categories/:id'
+ 		 - Delete the category by its mongo id 
+3. Textooks
+	 - GET '/textbooks'
+ 		 - Get all textbooks that match a query.  If the query is empty, returns
+   		   all textbooks
+	 - GET '/textbooks/:id'
+ 		 - Get a textbook by its mongo id
+	 - POST '/textbooks'
+ 		 - Create a textbook
+	 - PATCH '/textbooks/:id'
+ 		 - Update the information for a textbook by its mongo id
+	 - DELETE '/textbooks/:id'
+ 		 - Delete the textbook by its mongo id
+4. Other
+	 - POST '/upload'
+		 - Upload a textbook image to /img/, overwriting the previous file if same file extension
+		 - Files are uploaded as textbook-<id>.<file-extension>
+	 - POST '/users/login'
+		 - Verify credentials for login
+
+-----
+
+6. Edits from Phase 1
+
+- Scaled down some features in the interest of time
+     - Removed extensive user profile editing as it requires much more
+       authentication and more interfaces than were built
+     - Reduced home landing page to a static landing page to reduce overlap in
+       purpose with search page
+         - Featured carousel also requires much more work with the database
+           models
+     - Actual checkout was never intended to be implemented as it would involve
+       actual payment logic and related functionality
+
+ - Full API implemented
+     - Implemented API functions for GET, POST, PATCH, DELETE for all models to
+       provide capacity for most functionality
+
+ - Added some features to flesh out current features
+     - Adding to carts for those not logged in
+         - Adding to cart will add to the session cart and, if logged in, to the
+           user's cart in the database
+     - Carts and Wishlists required a lot more logic than originally coded
+         - Adding to session cart as well as posting to the database for users
+         - Coordinating between moving back and forth between carts and
+           wishlists
+     - Session management was implemented with session middleware and express
+         - Can access most of the website even without logging in
+         - No profile if not logged in
+         - Can sign up as well
+     - Added sorting by course
+         - Given previous work, this was a quickly scaled addition
+     - Adding editing popup forms
+         - Large edits to the capacity to add and edit books
+         - Many input fields called for creating popup forms to declutter views
+             - Popup forms for editing, adding books and editing users
+
+ - Reorganized .js files to provide more modularity
+     - API .js files are separated from "frontend" .js files
+         - Dedicated .js files for sending AJAX requests to the server and
+           returning promises for later manipulation
+     - Higher modularity in functions so that many of the .js files are more
+       akin to function libraries
+         - Does require that these .js files are loaded before the proper script
+           .js files, which isn't made explicit
+
+-----
